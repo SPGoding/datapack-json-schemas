@@ -10,6 +10,7 @@
     },
     "scripts": {
         "commit": "gitmoji -c",
+        "convert": "cd utils && node convert.js && cd ..",
         "release": "semantic-release"
     },
     "repository": {

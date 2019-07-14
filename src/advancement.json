@@ -46,7 +46,7 @@
                     ]
                 },
                 "background": {
-                    "$ref": "../shared/resource_location.json",
+                    "$ref": "../shared/namespaced_id.json",
                     "title": "Page background texture (Root advancement only [No parent])"
                 },
                 "show_toast": {
@@ -67,7 +67,7 @@
             }
         },
         "parent": {
-            "$ref": "../shared/resource_location.json",
+            "$ref": "../shared/namespaced_id.json",
             "title": "Parent advancement (if not specified and \"display\" is, it will create a new page)"
         },
         "criteria": {
@@ -102,7 +102,7 @@
                     "title": "Recipes",
                     "description": "A list of recipes to give to the player. Uses the same name locator as the `/recipe` command",
                     "items": {
-                        "$ref": "../shared/resource_location.json",
+                        "$ref": "../shared/namespaced_id.json",
                         "title": "A single recipe"
                     }
                 },
@@ -112,7 +112,7 @@
                     "description": "A list of loot tables to give to the player. Uses the path to the loot table (with the first folder within the loot_tables folder being the namespace)",
                     "items": {
                         "title": "A single loot table",
-                        "$ref": "../shared/resource_location.json"
+                        "$ref": "../shared/namespaced_id.json"
                     }
                 },
                 "experience": {
@@ -123,7 +123,7 @@
                 "function": {
                     "title": "A function to run as the player",
                     "description": "A single function to run as the player. Uses the path to the function (with the first folder within thefunction folder being the namespace)",
-                    "$ref": "../shared/resource_location.json"
+                    "$ref": "../shared/namespaced_id.json"
                 }
             }
         }

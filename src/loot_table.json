@@ -919,7 +919,7 @@
                             "description": "Set BlockEntityTag.LootTable and BlockEntityTag.LootPoolSeed tags",
                             "properties": {
                                 "name": {
-                                    "$ref": "../shared/resource_location.json",
+                                    "$ref": "../shared/namespaced_id.json",
                                     "description": "ID of loot table"
                                 },
                                 "seed": {
@@ -965,7 +965,7 @@
                             "description": "This entry will give the result of another loot table specified in 'name'. These cannot be self referencing in any way, if they are self referencing, they don't run"
                         },
                         "name": {
-                            "$ref": "../shared/resource_location.json",
+                            "$ref": "../shared/namespaced_id.json",
                             "title": "Loot table",
                             "description": "The loot table to be given"
                         }
@@ -1067,7 +1067,7 @@
                             "description": "Adds contents of item tag"
                         },
                         "name": {
-                            "$ref": "../shared/resource_location.json",
+                            "$ref": "../shared/namespaced_id.json",
                             "title": "Item tag",
                             "description": "ID of the item tag"
                         },

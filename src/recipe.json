@@ -193,7 +193,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "tag": {
-                            "$ref": "../shared/resource_location.json",
+                            "$ref": "../shared/namespaced_id.json",
                             "title": "An datapack item tag",
                             "description": "All items defined in the tag are acceptable"
                         }

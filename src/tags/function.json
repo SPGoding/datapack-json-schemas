@@ -14,7 +14,7 @@
             "items": {
                 "oneOf": [
                     {
-                        "$ref": "../../shared/resource_location.json",
+                        "$ref": "../../shared/namespaced_id.json",
                         "description": "A function resource location"
                     },
                     {
