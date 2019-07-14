@@ -37,7 +37,7 @@ work is licensed under a
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative
 Commons Attribution 4.0 International License</a>.
 
-This work is based on [SPGoding/datapack-json-schemass](https://github.com/SPGoding/datapack-json-schemass) created by [@Levertion](https://github.com/Levertion) which is released under a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). I keep it updated with Minecraft.
+This work is based on [Levertion/minecraft-json-schema](https://github.com/Levertion/minecraft-json-schema) created by [@Levertion](https://github.com/Levertion) which is released under a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). I keep it updated with Minecraft.
 
 ## Contributing
 
