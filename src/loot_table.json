@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "https://raw.githubusercontent.com/SPGoding/datapack-json-schemass/master/java/data/loot_table.json",
+    "$id": "https://raw.githubusercontent.com/SPGoding/datapack-json-schemass/master/src/loot_table.json",
     "type": "object",
     "title": "Root tag",
     "additionalProperties": false,

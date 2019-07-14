@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "https://raw.githubusercontent.com/SPGoding/datapack-json-schemas/master/java/data/advancement.json",
+    "$id": "https://raw.githubusercontent.com/SPGoding/datapack-json-schemas/master/src/advancement.json",
     "type": "object",
     "additionalProperties": false,
     "properties": {
