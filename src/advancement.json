@@ -14,7 +14,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "item": {
-                            "$ref": "../shared/item_name.json",
+                            "$ref": "./shared/item_name.json",
                             "title": "Item name",
                             "description": "The name of the item to use as the icon."
                         },
@@ -26,12 +26,12 @@
                     }
                 },
                 "title": {
-                    "$ref": "../shared/text_component.json",
+                    "$ref": "./shared/text_component.json",
                     "title": "Advancement title",
                     "description": "This is the title which will show when the advancement is hovered over. If it is the root advancement, this is also the title of the page. This is also shown in the toast upon getting the advancement"
                 },
                 "description": {
-                    "$ref": "../shared/text_component.json",
+                    "$ref": "./shared/text_component.json",
                     "title": "Advancement description",
                     "description": "Must be specified. The description of the advancement. Will be only seen when the advancement icon is hovered over in the advancements menu."
                 },
@@ -46,7 +46,7 @@
                     ]
                 },
                 "background": {
-                    "$ref": "../shared/namespaced_id.json",
+                    "$ref": "./shared/namespaced_id.json",
                     "title": "Page background texture (Root advancement only [No parent])"
                 },
                 "show_toast": {
@@ -67,7 +67,7 @@
             }
         },
         "parent": {
-            "$ref": "../shared/namespaced_id.json",
+            "$ref": "./shared/namespaced_id.json",
             "title": "Parent advancement (if not specified and \"display\" is, it will create a new page)"
         },
         "criteria": {
@@ -102,7 +102,7 @@
                     "title": "Recipes",
                     "description": "A list of recipes to give to the player. Uses the same name locator as the `/recipe` command",
                     "items": {
-                        "$ref": "../shared/namespaced_id.json",
+                        "$ref": "./shared/namespaced_id.json",
                         "title": "A single recipe"
                     }
                 },
@@ -112,7 +112,7 @@
                     "description": "A list of loot tables to give to the player. Uses the path to the loot table (with the first folder within the loot_tables folder being the namespace)",
                     "items": {
                         "title": "A single loot table",
-                        "$ref": "../shared/namespaced_id.json"
+                        "$ref": "./shared/namespaced_id.json"
                     }
                 },
                 "experience": {
@@ -123,7 +123,7 @@
                 "function": {
                     "title": "A function to run as the player",
                     "description": "A single function to run as the player. Uses the path to the function (with the first folder within thefunction folder being the namespace)",
-                    "$ref": "../shared/namespaced_id.json"
+                    "$ref": "./shared/namespaced_id.json"
                 }
             }
         }
@@ -158,16 +158,16 @@
                             "description": "All of these conditions must pass for the criteria to be activated",
                             "properties": {
                                 "parent": {
-                                    "$ref": "../shared/predicate.json#/definitions/entity",
+                                    "$ref": "./shared/predicate.json#/definitions/entity",
                                     "title": "Conditions to test against either of the parents",
                                     "description": "Using both parent and partner is only useful when using horses/donkeys"
                                 },
                                 "partner": {
-                                    "$ref": "../shared/predicate.json#/definitions/entity",
+                                    "$ref": "./shared/predicate.json#/definitions/entity",
                                     "title": "Conditions to test against either of the parents"
                                 },
                                 "child": {
-                                    "$ref": "../shared/predicate.json#/definitions/entity",
+                                    "$ref": "./shared/predicate.json#/definitions/entity",
                                     "title": "Conditions to test against the child entity"
                                 }
                             }
@@ -192,7 +192,7 @@
                             "type": "object",
                             "properties": {
                                 "potion": {
-                                    "$ref": "../shared/potion_name.json",
+                                    "$ref": "./shared/potion_name.json",
                                     "title": "The potion brewed"
                                 }
                             }
@@ -217,11 +217,11 @@
                             "description": "All of these conditions must pass for the criteria to be activated",
                             "properties": {
                                 "to": {
-                                    "$ref": "../shared/dimension_name.json",
+                                    "$ref": "./shared/dimension_name.json",
                                     "title": "Entered dimension"
                                 },
                                 "from": {
-                                    "$ref": "../shared/dimension_name.json",
+                                    "$ref": "./shared/dimension_name.json",
                                     "title": "Exited dimension"
                                 }
                             }
@@ -246,7 +246,7 @@
                             "description": "All of these conditions must pass for the criteria to be activated",
                             "properties": {
                                 "level": {
-                                    "$ref": "../shared/range.json",
+                                    "$ref": "./shared/range.json",
                                     "title": "The beacon level"
                                 }
                             }
@@ -272,7 +272,7 @@
                             "type": "object",
                             "properties": {
                                 "item": {
-                                    "$ref": "../shared/predicate.json#/definitions/item",
+                                    "$ref": "./shared/predicate.json#/definitions/item",
                                     "title": "Item",
                                     "description": "This will be checked against the item used up"
                                 }
@@ -298,11 +298,11 @@
                             "type": "object",
                             "properties": {
                                 "zombie": {
-                                    "$ref": "../shared/predicate.json#/definitions/entity",
+                                    "$ref": "./shared/predicate.json#/definitions/entity",
                                     "title": "Information about the zombie villager"
                                 },
                                 "villager": {
-                                    "$ref": "../shared/predicate.json#/definitions/entity",
+                                    "$ref": "./shared/predicate.json#/definitions/entity",
                                     "title": "Information about villager cured into"
                                 }
                             }
@@ -327,7 +327,7 @@
                             "type": "object",
                             "properties": {
                                 "effects": {
-                                    "$ref": "../shared/predicate.json#/definitions/effect",
+                                    "$ref": "./shared/predicate.json#/definitions/effect",
                                     "title": "The potion effects of the player"
                                 }
                             }
@@ -352,11 +352,11 @@
                             "type": "object",
                             "properties": {
                                 "item": {
-                                    "$ref": "../shared/predicate.json#/definitions/item",
+                                    "$ref": "./shared/predicate.json#/definitions/item",
                                     "title": "The item enchanted"
                                 },
                                 "levels": {
-                                    "$ref": "../shared/range.json",
+                                    "$ref": "./shared/range.json",
                                     "title": "The number of levels used"
                                 }
                             }
@@ -378,7 +378,7 @@
                             "additionalProperties": false,
                             "title": "The block to check",
                             "description": "The block which was entered to check the trigger",
-                            "$ref": "../shared/predicate.json#/definitions/block"
+                            "$ref": "./shared/predicate.json#/definitions/block"
                         }
                     }
                 },
@@ -400,7 +400,7 @@
                             "type": "object",
                             "properties": {
                                 "damage": {
-                                    "$ref": "../shared/predicate.json#/definitions/damage",
+                                    "$ref": "./shared/predicate.json#/definitions/damage",
                                     "title": "The damage taken"
                                 }
                             }
@@ -425,11 +425,11 @@
                             "type": "object",
                             "properties": {
                                 "damage": {
-                                    "$ref": "../shared/predicate.json#/definitions/damage",
+                                    "$ref": "./shared/predicate.json#/definitions/damage",
                                     "title": "The damage taken"
                                 },
                                 "entity": {
-                                    "$ref": "../shared/predicate.json#/definitions/entity"
+                                    "$ref": "./shared/predicate.json#/definitions/entity"
                                 }
                             }
                         }
@@ -451,7 +451,7 @@
                             "additionalProperties": false,
                             "title": "The death object",
                             "description": "The conditions object is a direct reference to a death object",
-                            "$ref": "../shared/predicate.json#/definitions/death"
+                            "$ref": "./shared/predicate.json#/definitions/death"
                         }
                     }
                 },
@@ -490,17 +490,17 @@
                                     "additionalProperties": false,
                                     "properties": {
                                         "occupied": {
-                                            "$ref": "../shared/range.json",
+                                            "$ref": "./shared/range.json",
                                             "title": "Occupied amount",
                                             "description": "How many of the slots in the player's inventory have an item in them"
                                         },
                                         "full": {
-                                            "$ref": "../shared/range.json",
+                                            "$ref": "./shared/range.json",
                                             "title": "Full slots",
                                             "description": "How many of the slots in the player's inventory have an item with the maximum amount of the item in them in them"
                                         },
                                         "empty": {
-                                            "$ref": "../shared/range.json",
+                                            "$ref": "./shared/range.json",
                                             "title": "Empty slots",
                                             "description": "The number of the slots in the player's inventory have no item in them"
                                         }
@@ -509,7 +509,7 @@
                                 "items": {
                                     "type": "array",
                                     "items": {
-                                        "$ref": "../shared/predicate.json#/definitions/item"
+                                        "$ref": "./shared/predicate.json#/definitions/item"
                                     }
                                 }
                             }
@@ -534,17 +534,17 @@
                             "type": "object",
                             "properties": {
                                 "item": {
-                                    "$ref": "../shared/predicate.json#/definitions/item",
+                                    "$ref": "./shared/predicate.json#/definitions/item",
                                     "title": "The item",
                                     "description": "The item whose durability changed"
                                 },
                                 "durability": {
-                                    "$ref": "../shared/range.json",
+                                    "$ref": "./shared/range.json",
                                     "title": "Absolute durability",
                                     "description": "The absolute durability of the item after the change"
                                 },
                                 "delta": {
-                                    "$ref": "../shared/range.json",
+                                    "$ref": "./shared/range.json",
                                     "title": "Change in durability",
                                     "description": "The amount that the durability changed by"
                                 }
@@ -569,12 +569,12 @@
                             "type": "object",
                             "properties": {
                                 "duration": {
-                                    "$ref": "../shared/range.json",
+                                    "$ref": "./shared/range.json",
                                     "title": "Time applied",
                                     "description": "The amount of time (in ticks) that the player must have been levitating"
                                 },
                                 "distance": {
-                                    "$ref": "../shared/predicate.json#/definitions/distance",
+                                    "$ref": "./shared/predicate.json#/definitions/distance",
                                     "title": "Distance travelled",
                                     "description": "How far the player must have travelled whilst under the effect of the levitation"
                                 }
@@ -597,7 +597,7 @@
                             "additionalProperties": false,
                             "title": "Location of the player",
                             "description": "The location of the player at the time of checking (for \"slept_in_bed\" this is just after they went to sleep)",
-                            "$ref": "../shared/predicate.json#/definitions/location"
+                            "$ref": "./shared/predicate.json#/definitions/location"
                         }
                     }
                 },
@@ -618,17 +618,17 @@
                             "type": "object",
                             "properties": {
                                 "entered": {
-                                    "$ref": "../shared/predicate.json#/definitions/location",
+                                    "$ref": "./shared/predicate.json#/definitions/location",
                                     "title": "Entering the nether",
                                     "description": "Where the player entered the nether (into the overworld)"
                                 },
                                 "exited": {
-                                    "$ref": "../shared/predicate.json#/definitions/location",
+                                    "$ref": "./shared/predicate.json#/definitions/location",
                                     "title": "Exit portal location",
                                     "description": "Where the player left the nether (into the overworld)"
                                 },
                                 "distance": {
-                                    "$ref": "../shared/predicate.json#/definitions/distance",
+                                    "$ref": "./shared/predicate.json#/definitions/distance",
                                     "title": "Distance travelled through the nether",
                                     "description": "The distance between the entry nether portal and the exit nether portal (in the overworld)"
                                 }
@@ -648,18 +648,18 @@
                             "description": "This criteria will be checked whenever the player places a block"
                         },
                         "conditions": {
-                            "$ref": "../shared/predicate.json#/definitions/block",
+                            "$ref": "./shared/predicate.json#/definitions/block",
                             "additionalProperties": false,
                             "title": "Required conditions",
                             "description": "The placed block",
                             "properties": {
                                 "item": {
-                                    "$ref": "../shared/predicate.json#/definitions/item",
+                                    "$ref": "./shared/predicate.json#/definitions/item",
                                     "title": "Item placed",
                                     "description": "The item placed to create the block"
                                 },
                                 "location": {
-                                    "$ref": "../shared/predicate.json#/definitions/location",
+                                    "$ref": "./shared/predicate.json#/definitions/location",
                                     "title": "Location of block",
                                     "description": "The location at which the block is placed"
                                 }
@@ -712,7 +712,7 @@
                             "type": "object",
                             "properties": {
                                 "entity": {
-                                    "$ref": "../shared/predicate.json#/definitions/entity",
+                                    "$ref": "./shared/predicate.json#/definitions/entity",
                                     "title": "The entity summmoned"
                                 }
                             }
@@ -737,7 +737,7 @@
                             "type": "object",
                             "properties": {
                                 "distance": {
-                                    "$ref": "../shared/range.json",
+                                    "$ref": "./shared/range.json",
                                     "title": "Distance from player to stronghold",
                                     "description": "The number of blocks in the XZ plane between the player and the stronghold - See pythagoras"
                                 }
@@ -763,11 +763,11 @@
                             "type": "object",
                             "properties": {
                                 "villager": {
-                                    "$ref": "../shared/predicate.json#/definitions/entity",
+                                    "$ref": "./shared/predicate.json#/definitions/entity",
                                     "title": "The villager traded with"
                                 },
                                 "item": {
-                                    "$ref": "../shared/predicate.json#/definitions/item",
+                                    "$ref": "./shared/predicate.json#/definitions/item",
                                     "title": "The item which was purchased"
                                 }
                             }

@@ -14,11 +14,11 @@
             "items": {
                 "oneOf": [
                     {
-                        "$ref": "../../shared/item_name.json",
+                        "$ref": "../shared/item_name.json",
                         "description": "An item ID"
                     },
                     {
-                        "$ref": "../../shared/tag_location.json",
+                        "$ref": "../shared/tag_location.json",
                         "description": "An item tag"
                     }
                 ]

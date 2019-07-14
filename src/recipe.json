@@ -157,7 +157,7 @@
                     ]
                 },
                 "result": {
-                    "$ref": "../shared/item_name.json",
+                    "$ref": "./shared/item_name.json",
                     "title": "The output item"
                 },
                 "experience": {
@@ -184,7 +184,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "item": {
-                            "$ref": "../shared/item_name.json",
+                            "$ref": "./shared/item_name.json",
                             "title": "The input item"
                         }
                     }
@@ -193,7 +193,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "tag": {
-                            "$ref": "../shared/namespaced_id.json",
+                            "$ref": "./shared/namespaced_id.json",
                             "title": "An datapack item tag",
                             "description": "All items defined in the tag are acceptable"
                         }
@@ -206,7 +206,7 @@
             "additionalProperties": false,
             "properties": {
                 "item": {
-                    "$ref": "../shared/item_name.json",
+                    "$ref": "./shared/item_name.json",
                     "title": "The output item"
                 },
                 "count": {

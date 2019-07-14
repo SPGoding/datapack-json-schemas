@@ -92,7 +92,7 @@
                             "$ref": "#/definitions/entity"
                         },
                         "predicate": {
-                            "$ref": "../shared/predicate.json#/definitions/entity"
+                            "$ref": "./shared/predicate.json#/definitions/entity"
                         }
                     }
                 },
@@ -112,7 +112,7 @@
                             "title": "Scores to check",
                             "description": "The name of each sub-object is the score to check, it is either a number or a range",
                             "additionalProperties": {
-                                "$ref": "../shared/range.json"
+                                "$ref": "./shared/range.json"
                             }
                         }
                     }
@@ -187,7 +187,7 @@
                             "description": "Check properties of block state"
                         },
                         "block": {
-                            "$ref": "../shared/block_name.json",
+                            "$ref": "./shared/block_name.json",
                             "title": "Block ID",
                             "description": "ID of block. Test will fail if broken block doesn't match"
                         },
@@ -211,7 +211,7 @@
                             "description": "Checks damage source"
                         },
                         "predicate": {
-                            "$ref": "../shared/predicate.json#/definitions/damage"
+                            "$ref": "./shared/predicate.json#/definitions/damage"
                         }
                     }
                 },
@@ -225,7 +225,7 @@
                             "description": "Checks location"
                         },
                         "predicate": {
-                            "$ref": "../shared/predicate.json#/definitions/location"
+                            "$ref": "./shared/predicate.json#/definitions/location"
                         }
                     }
                 },
@@ -239,7 +239,7 @@
                             "description": "Checks tool (available for block breaking and fishing)"
                         },
                         "predicate": {
-                            "$ref": "../shared/predicate.json#/definitions/item"
+                            "$ref": "./shared/predicate.json#/definitions/item"
                         }
                     }
                 },
@@ -264,7 +264,7 @@
                             "description": "Passes with probability picked from table, indexed by enchantment level"
                         },
                         "enchantment": {
-                            "$ref": "../shared/enchantment_name.json",
+                            "$ref": "./shared/enchantment_name.json",
                             "title": "Enchantment",
                             "description": "ID of enchantment"
                         },
@@ -511,7 +511,7 @@
                         "enchantments": {
                             "type": "array",
                             "items": {
-                                "$ref": "../shared/enchantment_name.json"
+                                "$ref": "./shared/enchantment_name.json"
                             },
                             "title": "Enchantments",
                             "description": "The enchantments to choose from to apply to the item"
@@ -664,7 +664,7 @@
                             "description": "Add display name of the item"
                         },
                         "name": {
-                            "$ref": "../shared/text_component.json",
+                            "$ref": "./shared/text_component.json",
                             "description": "A name will be added"
                         },
                         "entity": {
@@ -687,7 +687,7 @@
                         "lore": {
                             "type": "array",
                             "items": {
-                                "$ref": "../shared/text_component.json",
+                                "$ref": "./shared/text_component.json",
                                 "description": "A lore will be added"
                             }
                         },
@@ -784,7 +784,7 @@
                             "description": "Apply one of predefined bonus formulas"
                         },
                         "enchantment": {
-                            "$ref": "../shared/enchantment_name.json",
+                            "$ref": "./shared/enchantment_name.json",
                             "description": "ID for enchantment level used for calculation"
                         },
                         "formula": {
@@ -881,7 +881,7 @@
                             "description": "Limit count of every item stack to range",
                             "properties": {
                                 "limit": {
-                                    "$ref": "../shared/range.json"
+                                    "$ref": "./shared/range.json"
                                 }
                             }
                         }
@@ -919,7 +919,7 @@
                             "description": "Set BlockEntityTag.LootTable and BlockEntityTag.LootPoolSeed tags",
                             "properties": {
                                 "name": {
-                                    "$ref": "../shared/namespaced_id.json",
+                                    "$ref": "./shared/namespaced_id.json",
                                     "description": "ID of loot table"
                                 },
                                 "seed": {
@@ -947,7 +947,7 @@
                             "description": "This entry will give an item (if the conditions pass). The item type is defined in \"name\""
                         },
                         "name": {
-                            "$ref": "../shared/item_name.json",
+                            "$ref": "./shared/item_name.json",
                             "title": "Item",
                             "description": "The item to give"
                         }
@@ -965,7 +965,7 @@
                             "description": "This entry will give the result of another loot table specified in 'name'. These cannot be self referencing in any way, if they are self referencing, they don't run"
                         },
                         "name": {
-                            "$ref": "../shared/namespaced_id.json",
+                            "$ref": "./shared/namespaced_id.json",
                             "title": "Loot table",
                             "description": "The loot table to be given"
                         }
@@ -1067,7 +1067,7 @@
                             "description": "Adds contents of item tag"
                         },
                         "name": {
-                            "$ref": "../shared/namespaced_id.json",
+                            "$ref": "./shared/namespaced_id.json",
                             "title": "Item tag",
                             "description": "ID of the item tag"
                         },

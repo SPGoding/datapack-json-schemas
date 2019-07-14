@@ -14,11 +14,11 @@
             "items": {
                 "oneOf": [
                     {
-                        "$ref": "../../shared/namespaced_id.json",
+                        "$ref": "../shared/namespaced_id.json",
                         "description": "A function resource location"
                     },
                     {
-                        "$ref": "../../shared/tag_location.json",
+                        "$ref": "../shared/tag_location.json",
                         "description": "A function tag"
                     }
                 ]

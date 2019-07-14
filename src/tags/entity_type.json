@@ -14,11 +14,11 @@
             "items": {
                 "oneOf": [
                     {
-                        "$ref": "../../shared/entity_name.json",
+                        "$ref": "../shared/entity_name.json",
                         "description": "An entity ID"
                     },
                     {
-                        "$ref": "../../shared/tag_location.json",
+                        "$ref": "../shared/tag_location.json",
                         "description": "An entity type tag"
                     }
                 ]
