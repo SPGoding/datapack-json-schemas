@@ -71,7 +71,7 @@
         "conditions": {
             "type": "array",
             "title": "Conditions",
-            "description": "The conditions that must pass for this pool/entry to be used",
+            "description": "The conditions that must pass for this pool/entry/function to be used",
             "items": {
                 "$ref": "#/definitions/condition"
             }
@@ -364,7 +364,8 @@
                         "count": {
                             "$ref": "#/definitions/random",
                             "description": "The exact value or a range to choose a random value from to set the count to"
-                        }
+                        },
+                        "conditions": {}
                     }
                 },
                 {
@@ -382,7 +383,8 @@
                             "$ref": "#/definitions/random",
                             "description": "The data value or a random value in a range to set the 'durability' to. 0.35 means 35% durability left"
                         }
-                    }
+                    },
+                    "conditions": {}
                 },
                 {
                     "additionalProperties": false,
@@ -400,7 +402,8 @@
                             "title": "NBT string",
                             "description": "A string of nbt, which is escaped using the json format (a \\ in front of each \\ or \")"
                         }
-                    }
+                    },
+                    "conditions": {}
                 },
                 {
                     "additionalProperties": false,
@@ -494,7 +497,8 @@
                                     }
                                 }
                             }
-                        }
+                        },
+                        "conditions": {}
                     }
                 },
                 {
@@ -515,7 +519,8 @@
                             },
                             "title": "Enchantments",
                             "description": "The enchantments to choose from to apply to the item"
-                        }
+                        },
+                        "conditions": {}
                     }
                 },
                 {
@@ -536,7 +541,8 @@
                             "type": "boolean",
                             "title": "Use treasure enchantments?",
                             "description": "Whether the enchantment can include treasure enchantments (such as mending and frost walker)"
-                        }
+                        },
+                        "conditions": {}
                     },
                     "required": [
                         "levels"
@@ -561,7 +567,8 @@
                             "type": "number",
                             "title": "Maximum",
                             "description": "The maximum number of additional items available"
-                        }
+                        },
+                        "conditions": {}
                     }
                 },
                 {
@@ -574,7 +581,8 @@
                             ],
                             "title": "Smelt if possible",
                             "description": "If possible, smelt the item. If it can't be smelted, nothing happens."
-                        }
+                        },
+                        "conditions": {}
                     }
                 },
                 {
@@ -649,7 +657,8 @@
                         "skip_existing_chunks": {
                             "type": "boolean",
                             "description": "Don't search in chunks that have already been generated. Defaults to true"
-                        }
+                        },
+                        "conditions": {}
                     }
                 },
                 {
@@ -670,7 +679,8 @@
                         "entity": {
                             "$ref": "#/definitions/entity",
                             "description": "Will be used to parse selectors and scores defined in name"
-                        }
+                        },
+                        "conditions": {}
                     }
                 },
                 {
@@ -698,7 +708,8 @@
                         "replace": {
                             "type": "boolean",
                             "description": "Should replace old lore or not"
-                        }
+                        },
+                        "conditions": {}
                     }
                 },
                 {
@@ -715,7 +726,8 @@
                         "entity": {
                             "$ref": "#/definitions/entity",
                             "description": "If it's not a player, nothing will happen"
-                        }
+                        },
+                        "conditions": {}
                     }
                 },
                 {
@@ -790,7 +802,8 @@
                         "formula": {
                             "description": "Type of used bonus formula"
                         },
-                        "parameters": {}
+                        "parameters": {},
+                        "conditions": {}
                     }
                 },
                 {
@@ -808,7 +821,8 @@
                             "enum": [
                                 "block_entity"
                             ]
-                        }
+                        },
+                        "conditions": {}
                     }
                 },
                 {
@@ -853,7 +867,8 @@
                                     }
                                 }
                             }
-                        }
+                        },
+                        "conditions": {}
                     }
                 },
                 {
@@ -866,7 +881,8 @@
                             ],
                             "title": "Explosion decay",
                             "description": "Apply flat chance (equal to 1/explosion radius) for every item to be destroyed (items in stack are processed separately)"
-                        }
+                        },
+                        "conditions": {}
                     }
                 },
                 {
@@ -884,7 +900,8 @@
                                     "$ref": "./shared/range.json"
                                 }
                             }
-                        }
+                        },
+                        "conditions": {}
                     }
                 },
                 {
@@ -904,7 +921,8 @@
                             "items": {
                                 "$ref": "#/definitions/entry"
                             }
-                        }
+                        },
+                        "conditions": {}
                     }
                 },
                 {
@@ -927,10 +945,16 @@
                                     "description": "Seed (if omitted or 0, LootPoolSeed will not be set)"
                                 }
                             }
-                        }
+                        },
+                        "conditions": {}
                     }
                 }
-            ]
+            ],
+            "properties": {
+                "conditions": {
+                    "$ref": "#/definitions/conditions"
+                }
+            }
         },
         "entry": {
             "type": "object",
