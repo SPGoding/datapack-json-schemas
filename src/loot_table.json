@@ -16,7 +16,8 @@
                 "minecraft:chest",
                 "minecraft:empty",
                 "minecraft:entity",
-                "minecraft:fishing"
+                "minecraft:fishing",
+                "minecraft:generic"
             ]
         },
         "functions": {
@@ -355,8 +356,7 @@
                     "properties": {
                         "function": {
                             "enum": [
-                                "minecraft:set_count",
-                                "set_count"
+                                "minecraft:set_count"
                             ],
                             "title": "Set Number",
                             "description": "Set the 'count' of the items. Can be either an integer or a range. If it is a range it is set randomly within that range"
@@ -373,8 +373,7 @@
                     "properties": {
                         "function": {
                             "enum": [
-                                "minecraft:set_damage",
-                                "set_damage"
+                                "minecraft:set_damage"
                             ],
                             "title": "Set durability %",
                             "description": "Sets the percentage of the maximum durability"
@@ -391,8 +390,7 @@
                     "properties": {
                         "function": {
                             "enum": [
-                                "minecraft:set_nbt",
-                                "set_nbt"
+                                "minecraft:set_nbt"
                             ],
                             "title": "Set nbt",
                             "description": "A function to set the 'tag' nbt of the item to the value specified in 'nbt'"
@@ -410,8 +408,7 @@
                     "properties": {
                         "function": {
                             "enum": [
-                                "minecraft:set_attributes",
-                                "set_attributes"
+                                "minecraft:set_attributes"
                             ]
                         },
                         "modifiers": {
@@ -506,8 +503,7 @@
                     "properties": {
                         "function": {
                             "enum": [
-                                "minecraft:enchant_randomly",
-                                "enchant_randomly"
+                                "minecraft:enchant_randomly"
                             ],
                             "title": "Choose random enchantment",
                             "description": "Chooses a random enchantment from the enchantments list. If it is not specified, a random enchantment (which is compatible with the item) will be applied instead"
@@ -528,8 +524,7 @@
                     "properties": {
                         "function": {
                             "enum": [
-                                "minecraft:enchant_with_levels",
-                                "enchant_with_levels"
+                                "minecraft:enchant_with_levels"
                             ],
                             "title": "Enchanting table",
                             "description": "Enchants the item randomly as if it were enchanted. The levels key is a range object (either an integer or an object). If \"treasure\" is true, then the enchantment may use treasure enchantments (mending or frost-walker)"
@@ -553,8 +548,7 @@
                     "properties": {
                         "function": {
                             "enum": [
-                                "minecraft:looting_enchant",
-                                "looting_enchant"
+                                "minecraft:looting_enchant"
                             ],
                             "title": "Extra items with looting",
                             "description": "How many extra items to add for each level of the looting enchantment applied. For example, a count of 10 with a looting level of 5 would give an extra 50 items"
@@ -576,8 +570,7 @@
                     "properties": {
                         "function": {
                             "enum": [
-                                "minecraft:furnace_smelt",
-                                "furnace_smelt"
+                                "minecraft:furnace_smelt"
                             ],
                             "title": "Smelt if possible",
                             "description": "If possible, smelt the item. If it can't be smelted, nothing happens."
@@ -590,8 +583,7 @@
                     "properties": {
                         "function": {
                             "enum": [
-                                "minecraft:exploration_map",
-                                "exploration_map"
+                                "minecraft:exploration_map"
                             ],
                             "description": "Converts an empty map into an explorer map leading to a nearby generated structure"
                         },
@@ -666,8 +658,7 @@
                     "properties": {
                         "function": {
                             "enum": [
-                                "minecraft:set_name",
-                                "set_name"
+                                "minecraft:set_name"
                             ],
                             "title": "Set name",
                             "description": "Add display name of the item"
@@ -688,8 +679,7 @@
                     "properties": {
                         "function": {
                             "enum": [
-                                "minecraft:set_lore",
-                                "set_lore"
+                                "minecraft:set_lore"
                             ],
                             "title": "Set lore",
                             "description": "Add display lore of the item"
@@ -717,8 +707,7 @@
                     "properties": {
                         "function": {
                             "enum": [
-                                "minecraft:fill_player_head",
-                                "fill_player_head"
+                                "minecraft:fill_player_head"
                             ],
                             "title": "Fill player head",
                             "description": "Set SkullOwner of a player head according to the specific player"
@@ -789,8 +778,7 @@
                     "properties": {
                         "function": {
                             "enum": [
-                                "minecraft:apply_bonus",
-                                "apply_bonus"
+                                "minecraft:apply_bonus"
                             ],
                             "title": "Apply bonus",
                             "description": "Apply one of predefined bonus formulas"
@@ -811,8 +799,7 @@
                     "properties": {
                         "function": {
                             "enum": [
-                                "minecraft:copy_name",
-                                "copy_name"
+                                "minecraft:copy_name"
                             ],
                             "title": "Copy name",
                             "description": "Copy display name from block entity to item"
@@ -830,8 +817,7 @@
                     "properties": {
                         "function": {
                             "enum": [
-                                "minecraft:copy_nbt",
-                                "copy_nbt"
+                                "minecraft:copy_nbt"
                             ],
                             "title": "Copy NBT",
                             "description": "Copy nbt from the source to the target"
@@ -876,8 +862,7 @@
                     "properties": {
                         "function": {
                             "enum": [
-                                "minecraft:explosion_decay",
-                                "explosion_decay"
+                                "minecraft:explosion_decay"
                             ],
                             "title": "Explosion decay",
                             "description": "Apply flat chance (equal to 1/explosion radius) for every item to be destroyed (items in stack are processed separately)"
@@ -890,8 +875,7 @@
                     "properties": {
                         "function": {
                             "enum": [
-                                "minecraft:limit_count",
-                                "limit_count"
+                                "minecraft:limit_count"
                             ],
                             "title": "Limit count",
                             "description": "Limit count of every item stack to range",
@@ -909,8 +893,7 @@
                     "properties": {
                         "function": {
                             "enum": [
-                                "minecraft:set_contents",
-                                "set_contents"
+                                "minecraft:set_contents"
                             ],
                             "title": "Set contents",
                             "description": "Populate BlockEntityTag.Items (works for shulker boxes, chests, etc.) with items from entries"
@@ -930,8 +913,7 @@
                     "properties": {
                         "function": {
                             "enum": [
-                                "minecraft:set_loot_table",
-                                "set_loot_table"
+                                "minecraft:set_loot_table"
                             ],
                             "title": "Set loot table",
                             "description": "Set BlockEntityTag.LootTable and BlockEntityTag.LootPoolSeed tags",
@@ -964,7 +946,6 @@
                         "additionalProperties": false,
                         "type": {
                             "enum": [
-                                "item",
                                 "minecraft:item"
                             ],
                             "title": "Item",
@@ -982,7 +963,6 @@
                         "additionalProperties": false,
                         "type": {
                             "enum": [
-                                "loot_table",
                                 "minecraft:loot_table"
                             ],
                             "title": "Loot table",
@@ -1000,7 +980,6 @@
                         "additionalProperties": false,
                         "type": {
                             "enum": [
-                                "empty",
                                 "minecraft:empty"
                             ],
                             "title": "Empty",
