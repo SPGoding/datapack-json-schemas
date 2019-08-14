@@ -65,7 +65,11 @@
                         }
                     }
                 }
-            }
+            },
+            "required": [
+                "rolls",
+                "entries"
+            ]
         }
     },
     "definitions": {
