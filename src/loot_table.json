@@ -827,9 +827,15 @@
                             "description": "Copy nbt from the source to the target"
                         },
                         "source": {
-                            "$ref": "#/definitions/entity",
-                            "enum": [
-                                "block_entity"
+                            "oneOf": [
+                                {
+                                    "$ref": "#/definitions/entity"
+                                },
+                                {
+                                    "enum": [
+                                        "block_entity"
+                                    ]
+                                }
                             ]
                         },
                         "ops": {
