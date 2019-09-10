@@ -7,8 +7,9 @@
  */
 
 const fs = require('fs')
+const { join } = require('path')
 
-const registriesJson = JSON.parse(fs.readFileSync('./registries.json', { encoding: 'utf8' }))
+const registriesJson = JSON.parse(fs.readFileSync(join(__dirname, './registries.json'), { encoding: 'utf8' }))
 
 function convert(keyName, fileName) {
     const ans = {
@@ -24,7 +25,7 @@ function convert(keyName, fileName) {
 
     ans.enum.sort()
 
-    fs.writeFileSync(`../src/shared/${fileName}.json`, JSON.stringify(ans, undefined, 4))
+    fs.writeFileSync(join(__dirname, `../src/shared/${fileName}.json`), JSON.stringify(ans, undefined, 4))
 }
 
 convert('minecraft:sound_event', 'sound_event')

@@ -360,6 +360,31 @@
                     "properties": {
                         "function": {
                             "enum": [
+                                "minecraft:copy_state"
+                            ],
+                            "title": "Copy state",
+                            "description": "Copy the block states to BlockStateTag."
+                        },
+                        "block": {
+                            "$ref": "./shared/block_name.json",
+                            "description": "The block name"
+                        },
+                        "properties": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "description": "A block state key"
+                            },
+                            "description": "A list of block state keys"
+                        },
+                        "conditions": {}
+                    }
+                },
+                {
+                    "additionalProperties": false,
+                    "properties": {
+                        "function": {
+                            "enum": [
                                 "minecraft:set_count"
                             ],
                             "title": "Set Number",

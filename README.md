@@ -6,7 +6,7 @@
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)
 [![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)](https://gitmoji.carloscuesta.me/)
 
-Update to: Minecraft Java Edition 1.14.4-pre5
+Update to: Minecraft Java Edition 19w36a
 
 JSON schemas for Minecraft: Java Edition datapack JSON files. Information about json schemas can be found at [json-schema.org](http://json-schema.org/).
 
