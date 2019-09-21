@@ -1,4 +1,4 @@
-# This package is deprecated. Futher updates will be avalaible on [https://github.com/SPGoding/vscode-datapack-helper-plus-json](SPGoding/vscode-datapack-helper-plus-json).
+# This package is deprecated. Futher updates will be avalaible on [SPGoding/vscode-datapack-helper-plus-json](https://github.com/SPGoding/vscode-datapack-helper-plus-json).
 
 # datapack-json-schemas
 
