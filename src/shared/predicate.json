@@ -89,7 +89,7 @@
                                 ]
                             },
                             "propertyNames": {
-                                "$ref": "./shared/namespaced_id"
+                                "$ref": "./namespaced_id.json"
                             }
                         },
                         "gamemode": {
@@ -112,7 +112,7 @@
                                 "title": "Whether or not the recipe is known to player"
                             },
                             "propertyNames": {
-                                "$ref": "./shared/namespaced_id"
+                                "$ref": "./namespaced_id.json"
                             }
                         },
                         "stats": {

@@ -11,7 +11,7 @@
             "body": {
                 "pack": {
                     "description": "${1:${TM_DIRECTORY/(?:.*[\\\\/])?([^\\\\/]*)/$1/}}: $2",
-                    "pack_format": 1
+                    "pack_format": 4
                 }
             }
         }
@@ -23,10 +23,10 @@
             "description": "Information about the datapack",
             "properties": {
                 "pack_format": {
-                    "default": 1,
+                    "default": 4,
                     "type": "integer",
                     "title": "Datapack version",
-                    "description": "This is 1 for 1.13"
+                    "description": "This is 4 for 1.13"
                 },
                 "description": {
                     "$ref": "./shared/text_component.json#",

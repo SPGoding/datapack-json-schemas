@@ -64,12 +64,12 @@
                             "$ref": "#/definitions/entry"
                         }
                     }
-                }
-            },
-            "required": [
-                "rolls",
-                "entries"
-            ]
+                },
+                "required": [
+                    "rolls",
+                    "entries"
+                ]
+            }
         }
     },
     "definitions": {

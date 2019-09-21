@@ -648,10 +648,14 @@
                             "description": "This criteria will be checked whenever the player places a block"
                         },
                         "conditions": {
-                            "$ref": "./shared/predicate.json#/definitions/block",
                             "additionalProperties": false,
                             "title": "Required conditions",
                             "description": "The placed block",
+                            "allOf": [
+                                {
+                                    "$ref": "./shared/predicate.json#/definitions/block"
+                                }
+                            ],
                             "properties": {
                                 "item": {
                                     "$ref": "./shared/predicate.json#/definitions/item",
@@ -662,7 +666,9 @@
                                     "$ref": "./shared/predicate.json#/definitions/location",
                                     "title": "Location of block",
                                     "description": "The location at which the block is placed"
-                                }
+                                },
+                                "block": {},
+                                "state": {}
                             }
                         }
                     }
