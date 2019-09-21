@@ -11,7 +11,7 @@
     },
     "scripts": {
         "commit": "gitmoji -c",
-        "convert": "node convert.js",
+        "convert": "node ./utils/convert.js",
         "release": "semantic-release"
     },
     "repository": {

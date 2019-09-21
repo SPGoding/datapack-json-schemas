@@ -8,27 +8,27 @@
                 {
                     "properties": {
                         "absolute": {
-                            "$ref": "./range.json"
+                            "$ref": "./range_or_number.json"
                         }
                     }
                 },
                 {
                     "properties": {
                         "x": {
-                            "$ref": "./range.json"
+                            "$ref": "./range_or_number.json"
                         },
                         "y": {
-                            "$ref": "./range.json"
+                            "$ref": "./range_or_number.json"
                         },
                         "z": {
-                            "$ref": "./range.json"
+                            "$ref": "./range_or_number.json"
                         }
                     }
                 },
                 {
                     "properties": {
                         "horizontal": {
-                            "$ref": "./range.json"
+                            "$ref": "./range_or_number.json"
                         }
                     }
                 }
@@ -59,6 +59,137 @@
                 "type": {
                     "$ref": "./entity_name.json",
                     "title": "The type of the entity"
+                },
+                "team": {
+                    "type": "string",
+                    "title": "The team of the entity"
+                },
+                "player": {
+                    "type": "object",
+                    "title": "Checks player properties",
+                    "additionalProperties": false,
+                    "properties": {
+                        "advancements": {
+                            "type": "object",
+                            "title": "Map of advancement ids",
+                            "additionalProperties": {
+                                "oneOf": [
+                                    {
+                                        "type": "boolean",
+                                        "title": "Whether or not the player achieves this advancement"
+                                    },
+                                    {
+                                        "type": "object",
+                                        "title": "Map of critetion ids",
+                                        "additionalProperties": {
+                                            "type": "boolean",
+                                            "title": "Whether or not the player achieves this critetion"
+                                        }
+                                    }
+                                ]
+                            },
+                            "propertyNames": {
+                                "$ref": "./shared/namespaced_id"
+                            }
+                        },
+                        "gamemode": {
+                            "enum": [
+                                "adventure",
+                                "creative",
+                                "spectator",
+                                "survival"
+                            ]
+                        },
+                        "level": {
+                            "$ref": "./range_or_number.json",
+                            "title": "range of allowed player levels"
+                        },
+                        "recipes": {
+                            "type": "object",
+                            "title": "Map of recipe ids",
+                            "additionalProperties": {
+                                "type": "boolean",
+                                "title": "Whether or not the recipe is known to player"
+                            },
+                            "propertyNames": {
+                                "$ref": "./shared/namespaced_id"
+                            }
+                        },
+                        "stats": {
+                            "type": "array",
+                            "title": "List of statistics to match",
+                            "items": {
+                                "additionalProperties": false,
+                                "properties": {
+                                    "type": {
+                                        "title": "Stat type"
+                                    },
+                                    "stat": {
+                                        "title": "Stat name"
+                                    },
+                                    "value": {
+                                        "$ref": "./range_or_number.json",
+                                        "title": "Value of the stat"
+                                    }
+                                },
+                                "oneOf": [
+                                    {
+                                        "properties": {
+                                            "type": {
+                                                "enum": [
+                                                    "minecraft:custom"
+                                                ]
+                                            },
+                                            "stat": {
+                                                "$ref": "./custom_stat.json"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "properties": {
+                                            "type": {
+                                                "enum": [
+                                                    "minecraft:crafted",
+                                                    "minecraft:used",
+                                                    "minecraft:broken",
+                                                    "minecraft:picked_up",
+                                                    "minecraft:dropped"
+                                                ]
+                                            },
+                                            "stat": {
+                                                "$ref": "./item_name.json"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "properties": {
+                                            "type": {
+                                                "enum": [
+                                                    "minecraft:mined"
+                                                ]
+                                            },
+                                            "stat": {
+                                                "$ref": "./block_name.json"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "properties": {
+                                            "type": {
+                                                "enum": [
+                                                    "minecraft:killed",
+                                                    "minecraft:killed_by"
+                                                ]
+                                            },
+                                            "stat": {
+                                                "$ref": "./entity_name.json"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
                 },
                 "flags": {
                     "type": "object",
@@ -102,6 +233,52 @@
                     "title": "The biome the location is in",
                     "$ref": "./biome_name.json"
                 },
+                "block": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "title": "Predicate for block",
+                    "properties": {
+                        "block": {
+                            "$ref": "./block_name.json",
+                            "title": "Block ID"
+                        },
+                        "tag": {
+                            "$ref": "./namespaced_id.json",
+                            "title": "Block tag ID"
+                        },
+                        "nbt": {
+                            "$ref": "#/definitions/nbt_string",
+                            "title": "Block entity NBT"
+                        },
+                        "state": {
+                            "additionalProperties": true,
+                            "title": "Map of name-value properties"
+                        }
+                    }
+                },
+                "fluid": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "title": "Predicate for fluid",
+                    "properties": {
+                        "fluid": {
+                            "$ref": "./fluid_name.json",
+                            "title": "Fluid ID"
+                        },
+                        "tag": {
+                            "$ref": "./namespaced_id.json",
+                            "title": "Fluid tag ID"
+                        },
+                        "state": {
+                            "additionalProperties": true,
+                            "title": "Map of name-value properties"
+                        }
+                    }
+                },
+                "light": {
+                    "$ref": "./range.json",
+                    "title": "The range of visble light"
+                },
                 "dimension": {
                     "$ref": "./dimension_name.json",
                     "title": "The dimension the location is in"
@@ -131,13 +308,13 @@
                     "additionalProperties": false,
                     "properties": {
                         "x": {
-                            "$ref": "./range.json"
+                            "$ref": "./range_or_number.json"
                         },
                         "y": {
-                            "$ref": "./range.json"
+                            "$ref": "./range_or_number.json"
                         },
                         "z": {
-                            "$ref": "./range.json"
+                            "$ref": "./range_or_number.json"
                         }
                     }
                 }
@@ -159,7 +336,7 @@
                                 "type": "integer"
                             },
                             {
-                                "$ref": "./range.json"
+                                "$ref": "./range_or_number.json"
                             }
                         ]
                     },
@@ -170,7 +347,7 @@
                                 "type": "integer"
                             },
                             {
-                                "$ref": "./range.json"
+                                "$ref": "./range_or_number.json"
                             }
                         ]
                     },
@@ -195,11 +372,11 @@
                     "title": "The item metadata"
                 },
                 "durability": {
-                    "$ref": "./range.json",
+                    "$ref": "./range_or_number.json",
                     "title": "The remaining durability"
                 },
                 "count": {
-                    "$ref": "./range.json",
+                    "$ref": "./range_or_number.json",
                     "title": "The number of items in the stack"
                 },
                 "potion": {
@@ -218,7 +395,7 @@
                                 "title": "The enchantment name"
                             },
                             "levels": {
-                                "$ref": "./range.json",
+                                "$ref": "./range_or_number.json",
                                 "title": "The level of the advancements"
                             }
                         }
@@ -254,12 +431,12 @@
             "type": "object",
             "properties": {
                 "dealt": {
-                    "$ref": "./range.json",
+                    "$ref": "./range_or_number.json",
                     "title": "How much damage was dealt",
                     "description": "This is calculated before damage reduction (such due to armour)"
                 },
                 "taken": {
-                    "$ref": "./range.json",
+                    "$ref": "./range_or_number.json",
                     "title": "How much damage was taken",
                     "description": "This is calculated after damage reduction (such due to armour)"
                 },
