@@ -1,3 +1,5 @@
+# This package is deprecated. Futher updates will be avalaible on [https://github.com/SPGoding/vscode-datapack-helper-plus-json](SPGoding/vscode-datapack-helper-plus-json).
+
 # datapack-json-schemas
 
 [![CircleCI](https://img.shields.io/circleci/build/github/SPGoding/datapack-json-schemas.svg?logo=circleci&style=flat-square)](https://circleci.com/gh/SPGoding/datapack-json-schemas)
